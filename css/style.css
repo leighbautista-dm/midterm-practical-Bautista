@@ -1,0 +1,195 @@
+/* ==========================================================================
+   1. DESIGN TOKENS
+   ========================================================================== */
+:root {
+    --bg-color: #f8fafc;
+    --surface-color: #ffffff;
+    --text-color: #1e293b;
+    --text-muted: #475569;
+    --primary-color: #0284c7;
+    --primary-hover: #0369a1;
+    --border-color: #cbd5e1;
+
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+
+    --font-base: 1rem;
+    --font-large: 1.25rem;
+    --font-title: 2rem;
+}
+
+/* ==========================================================================
+   2. BASE TYPOGRAPHY & LAYOUT
+   ========================================================================== */
+body {
+    font-family: Arial, sans-serif;
+    font-size: var(--font-base);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: var(--space-md);
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: var(--font-title);
+    margin-bottom: var(--space-md);
+}
+
+/* Centered Heading */
+.center-text {
+    text-align: center;
+}
+
+/* Centered Image */
+.img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.center-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section {
+    margin-top: var(--space-lg);
+}
+
+/* ==========================================================================
+   3. NAVIGATION (:hover & :focus)
+   ========================================================================== */
+header nav {
+    background-color: var(--surface-color);
+    padding: var(--space-md);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    margin-bottom: var(--space-lg);
+    text-align: center;
+}
+
+header nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 var(--space-sm);
+    padding: var(--space-sm);
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+header nav a:hover {
+    color: var(--primary-hover);
+    background-color: #e0f2fe;
+}
+
+header nav a:focus {
+    outline: 2px solid var(--primary-color);
+}
+
+/* ==========================================================================
+   4. DATA TABLE COMPONENT
+   ========================================================================== */
+.content-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--surface-color);
+    margin: var(--space-md) 0 var(--space-lg);
+    border: 1px solid var(--border-color);
+}
+
+.content-table caption {
+    text-align: left;
+    font-weight: bold;
+    color: var(--text-muted);
+    margin-bottom: var(--space-sm);
+}
+
+.content-table th, 
+.content-table td {
+    padding: var(--space-md);
+    border: 1px solid var(--border-color);
+    text-align: left;
+}
+
+.content-table th {
+    background-color: #f1f5f9;
+}
+
+/* ==========================================================================
+   5. CENTERED ENROLLMENT FORM (.enroll & .infoform)
+   ========================================================================== */
+.enroll {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    padding: var(--space-lg);
+    border-radius: 8px;
+    margin: var(--space-lg) auto 0;
+    max-width: 450px;
+    text-align: center;
+}
+
+.infoform {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.infoform label {
+    margin-top: var(--space-md);
+    font-weight: bold;
+}
+
+.infoform input {
+    width: 100%;
+    padding: var(--space-sm);
+    margin-top: 4px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.infoform input:hover {
+    border-color: #94a3b8;
+}
+
+.infoform input:focus {
+    border-color: var(--primary-color);
+    outline: 2px solid var(--primary-color);
+}
+
+#btn {
+    margin-top: var(--space-lg);
+    padding: var(--space-sm) var(--space-lg);
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: var(--font-base);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+#btn:hover {
+    background-color: var(--primary-hover);
+}
+
+#btn:focus {
+    outline: 2px solid #000000;
+}
+
+/* ==========================================================================
+   6. FOOTER
+   ========================================================================== */
+.footer {
+    text-align: center;
+    padding: var(--space-md);
+    margin-top: var(--space-lg);
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+}
